@@ -1,5 +1,14 @@
 import { useState } from 'react'
 import Notification from './Components/Notification';
+//images
+import angela from './images/avatar-angela-gray.webp'
+import anna from './images/avatar-anna-kim.webp'
+import jacob from './images/avatar-jacob-thompson.webp'
+import kimberly from './images/avatar-kimberly-smith.webp'
+import webber from './images/avatar-mark-webber.webp'
+import nathan from './images/avatar-nathan-peterson.webp'
+import rizky from './images/avatar-rizky-hasanuddin.webp'
+import chess from './images/image-chess.webp'
 
 
 function App() {
@@ -31,7 +40,7 @@ function App() {
     {
       id: 0,
       name: "Mark Webber",
-      urlphoto:"/images/avatar-mark-webber.webp",
+      urlphoto: webber,
       activity: "reacted to your recent post",
       group: "My first tournament today!",
       time: time,
@@ -40,7 +49,7 @@ function App() {
     {
       id: 1,
       name: "Angela Gray",
-      urlphoto:"/images/avatar-angela-gray.webp",
+      urlphoto: angela,
       activity: "followed you",
       time: time,
       read: false
@@ -48,7 +57,7 @@ function App() {
     {
       id: 2,
       name: "Jacob Thompson",
-      urlphoto:"/images/avatar-jacob-thompson.webp",
+      urlphoto: jacob,
       activity: "joined on your group",
       group: "Chess Club",
       time: time,
@@ -57,7 +66,7 @@ function App() {
     {
       id: 3,
       name: "Rizky Hasanuddin",
-      urlphoto:"/images/avatar-rizky-hasanuddin.webp",
+      urlphoto: rizky,
       activity: "sent you a private message",
       message: "\"Hello! Thanks for setting up the Chess Club! I've been a member for a few weeks now and I'm already having lots of fun and improving my game.\"",
       time: time,
@@ -66,16 +75,16 @@ function App() {
     {
       id: 4,
       name: "Kimberly Smith",
-      urlphoto:"/images/avatar-kimberly-smith.webp",
+      urlphoto: kimberly,
       activity: "commented on your picture",
       time: time,
-      displayphoto: "/images/image-chess.webp",
+      displayphoto: chess,
       read: false
     },
     {
       id: 5,
       name: "Nathan Peterson",
-      urlphoto:"/images/avatar-nathan-peterson.webp",
+      urlphoto: nathan,
       activity: "reacted to your recent post",
       group: "5 end-game strategies to increase your win rate",
       time: time,
@@ -84,7 +93,7 @@ function App() {
     {
       id: 6,
       name: "Anna Kim",
-      urlphoto:"/images/avatar-anna-kim.webp",
+      urlphoto: anna,
       activity: "left the group",
       group: "Chess Club",
       time: time,
