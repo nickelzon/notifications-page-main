@@ -110,8 +110,8 @@ function App() {
     <div className="notification-page">
 
       <div className="heading">
-        <h5><strong>Notifications</strong><span className={notif.filter((a) => a.read === false).length > 0 ? "badge text-bg-" : "badge-none"}>{notif.filter((a) => a.read === false).length}</span></h5>
-        <button type="button" className="btn btn-light btn-sm" onClick={() => setNotif(notif.map((find) => find ? {...find, read: true} : find))}>Mark all as read</button>
+        <div className="heading-left-side"><strong>Notifications</strong><span className={notif.filter((a) => a.read === false).length > 0 ? "badge text-bg-" : "badge-none"}>{notif.filter((a) => a.read === false).length}</span></div>
+        <button type="button" className="button" onClick={() => setNotif(notif.map((find) => find ? {...find, read: true} : find))}><span className="button">Mark all as read</span></button>
       </div>
 
       <div className="notification-box">
