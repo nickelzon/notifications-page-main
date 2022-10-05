@@ -3,6 +3,8 @@
 
 This project is the solution for my accepted challenge from Frontend Mentor.
 
+Visit this url where it is hosted ### `https://nickelzon.github.io/notifications-page-main/`
+
 I had built this project with React. To create a server for its build, go to the notification-page directory and run:
 
 ### `serve -s build`
