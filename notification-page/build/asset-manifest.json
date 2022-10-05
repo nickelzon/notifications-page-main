@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.b29d9ffe.css",
-    "main.js": "/static/js/main.2ca32020.js",
-    "static/js/787.0b05b966.chunk.js": "/static/js/787.0b05b966.chunk.js",
-    "static/media/PlusJakartaSans-VariableFont_wght.ttf": "/static/media/PlusJakartaSans-VariableFont_wght.ae47e4d01757abf8ad63.ttf",
-    "index.html": "/index.html",
-    "main.b29d9ffe.css.map": "/static/css/main.b29d9ffe.css.map",
-    "main.2ca32020.js.map": "/static/js/main.2ca32020.js.map",
-    "787.0b05b966.chunk.js.map": "/static/js/787.0b05b966.chunk.js.map"
+    "main.css": "/notifications-page-main/static/css/main.a87285b5.css",
+    "main.js": "/notifications-page-main/static/js/main.a02f9cea.js",
+    "static/js/787.0b05b966.chunk.js": "/notifications-page-main/static/js/787.0b05b966.chunk.js",
+    "static/media/PlusJakartaSans-VariableFont_wght.ttf": "/notifications-page-main/static/media/PlusJakartaSans-VariableFont_wght.ae47e4d01757abf8ad63.ttf",
+    "index.html": "/notifications-page-main/index.html",
+    "main.a87285b5.css.map": "/notifications-page-main/static/css/main.a87285b5.css.map",
+    "main.a02f9cea.js.map": "/notifications-page-main/static/js/main.a02f9cea.js.map",
+    "787.0b05b966.chunk.js.map": "/notifications-page-main/static/js/787.0b05b966.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b29d9ffe.css",
-    "static/js/main.2ca32020.js"
+    "static/css/main.a87285b5.css",
+    "static/js/main.a02f9cea.js"
   ]
 }
