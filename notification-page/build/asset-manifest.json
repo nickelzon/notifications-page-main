@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.b29d9ffe.css",
+    "main.js": "/static/js/main.2ca32020.js",
+    "static/js/787.0b05b966.chunk.js": "/static/js/787.0b05b966.chunk.js",
+    "static/media/PlusJakartaSans-VariableFont_wght.ttf": "/static/media/PlusJakartaSans-VariableFont_wght.ae47e4d01757abf8ad63.ttf",
+    "index.html": "/index.html",
+    "main.b29d9ffe.css.map": "/static/css/main.b29d9ffe.css.map",
+    "main.2ca32020.js.map": "/static/js/main.2ca32020.js.map",
+    "787.0b05b966.chunk.js.map": "/static/js/787.0b05b966.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b29d9ffe.css",
+    "static/js/main.2ca32020.js"
+  ]
+}
