@@ -4,6 +4,29 @@ import Notification from './Components/Notification';
 
 function App() {
 
+//setting the date of the notifications
+  var notifDate = new Date("October 1, 2022 13:00:00")
+  var today = new Date()
+  var day = (today.getDate() - notifDate.getDate());
+  var hours = (today.getHours() - notifDate.getHours());
+  var minutes = (today.getMinutes() - notifDate.getMinutes());
+  var time
+
+// formatting the hours, minutes and days. if a day is passed, date will be displayed instead.
+  if (day > 0){
+    time = (notifDate.getMonth()+1) + '-' + notifDate.getDate() + '-' + notifDate.getFullYear();
+  } else {
+    var hr = "hour"
+    var min = "minute"
+    if (hours > 1){
+      hr = "hours"
+    }
+    if (minutes > 1){
+      min = "minutes"
+    }
+    time = [hours, hr, minutes, min+" ago"]
+  }
+
   const [notif, setNotif] = useState([
     {
       id: 0,
@@ -11,7 +34,7 @@ function App() {
       urlphoto:"/images/avatar-mark-webber.webp",
       activity: "reacted to your recent post",
       group: "My first tournament today!",
-      time:"1m ago",
+      time: time,
       read: false
     },
     {
@@ -19,17 +42,16 @@ function App() {
       name: "Angela Gray",
       urlphoto:"/images/avatar-angela-gray.webp",
       activity: "followed you",
-      group: "",
-      time:"5m ago",
+      time: time,
       read: false
     },
     {
       id: 2,
       name: "Jacob Thompson",
       urlphoto:"/images/avatar-jacob-thompson.webp",
-      activity: "reacted to your recent post",
-      group: "",
-      time:"2 weeks ago",
+      activity: "joined on your group",
+      group: "Chess Club",
+      time: time,
       read: false
     },
     {
@@ -37,8 +59,8 @@ function App() {
       name: "Rizky Hasanuddin",
       urlphoto:"/images/avatar-rizky-hasanuddin.webp",
       activity: "sent you a private message",
-      group: "",
-      time:"2 weeks ago",
+      message: "\"Hello! Thanks for setting up the Chess Club! I've been a member for a few weeks now and I'm already having lots of fun and improving my game.\"",
+      time: time,
       read: false
     },
     {
@@ -46,8 +68,8 @@ function App() {
       name: "Kimberly Smith",
       urlphoto:"/images/avatar-kimberly-smith.webp",
       activity: "commented on your picture",
-      group: "",
-      time:"1 week ago",
+      time: time,
+      displayphoto: "/images/image-chess.webp",
       read: false
     },
     {
@@ -56,7 +78,7 @@ function App() {
       urlphoto:"/images/avatar-nathan-peterson.webp",
       activity: "reacted to your recent post",
       group: "5 end-game strategies to increase your win rate",
-      time:"2 weeks ago",
+      time: time,
       read: false
     },
     {
@@ -65,7 +87,7 @@ function App() {
       urlphoto:"/images/avatar-anna-kim.webp",
       activity: "left the group",
       group: "Chess Club",
-      time:"2 weeks ago",
+      time: time,
       read: false
     }
   ])
@@ -80,7 +102,7 @@ function App() {
 
       <div className="heading">
         <h5><strong>Notifications</strong><span className={notif.filter((a) => a.read === false).length > 0 ? "badge text-bg-" : "badge-none"}>{notif.filter((a) => a.read === false).length}</span></h5>
-        <button type="button" className="btn btn-light btn-sm" onClick={() => setNotif(notif.map((find) => find ? {...find, read: true} : find))}>Mark as all read</button>
+        <button type="button" className="btn btn-light btn-sm" onClick={() => setNotif(notif.map((find) => find ? {...find, read: true} : find))}>Mark all as read</button>
       </div>
 
       <div className="notification-box">
