@@ -14,7 +14,7 @@ import chess from './images/image-chess.webp'
 function App() {
 
 //setting the date of the notifications
-  var notifDate = new Date("October 1, 2022 13:00:00")
+  var notifDate = new Date("October 7, 2022 00:00:00")
   var today = new Date()
   var day = (today.getDate() - notifDate.getDate());
   var hours = (today.getHours() - notifDate.getHours());
@@ -68,7 +68,7 @@ function App() {
       name: "Rizky Hasanuddin",
       urlphoto: rizky,
       activity: "sent you a private message",
-      message: "\"Hello! Thanks for setting up the Chess Club! I've been a member for a few weeks now and I'm already having lots of fun and improving my game.\"",
+      message: "\"Hello! Thanks for setting up the Chess Club! I've been a member for a few weeks now and so what dati ka bang boang?\"",
       time: time,
       read: false
     },
@@ -77,6 +77,7 @@ function App() {
       name: "Kimberly Smith",
       urlphoto: kimberly,
       activity: "commented on your picture",
+      message: "\"Ang panget mo naman bess HAHAHAHA para kang puyat ng limang linggo\"",
       time: time,
       displayphoto: chess,
       read: false
@@ -106,12 +107,12 @@ function App() {
   }
 
   return (
-    <div className="main">
     <div className="notification-page">
 
       <div className="heading">
-        <div className="heading-left-side"><strong>Notifications</strong><span className={notif.filter((a) => a.read === false).length > 0 ? "badge text-bg-" : "badge-none"}>{notif.filter((a) => a.read === false).length}</span></div>
-        <button type="button" className="button" onClick={() => setNotif(notif.map((find) => find ? {...find, read: true} : find))}><span className="button">Mark all as read</span></button>
+        <span className="text-notif">Notifications     <span className="badge rounded-pill text-bg-primary">{notif.filter((countread) => (!countread.read)).length}</span></span>
+        
+        <button type='button' className="mark-all-as-read-btn" onClick={() => setNotif(notif.map((find) => find ? {...find, read: true} : find))}>Mark all as read</button>
       </div>
 
       <div className="notification-box">
@@ -119,8 +120,6 @@ function App() {
       </div>
 
     </div>
-    </div>
-
   );
 }
 

@@ -5,20 +5,22 @@
 
 * {
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'Plus Jakarta Sans';
+  cursor: crosshair;
 }
 
 body {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  font-family: 'Plus Jakarta Sans';
+  /* border: solid 1px red; */
 }
 
 ::-webkit-scrollbar {
-  width: 0.4rem;
-  height: 0.4rem;
+  max-width: 0.4rem;
+  max-height: 0.4rem;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -30,176 +32,132 @@ body {
   margin-block: 0.5rem;
 }
 
-.main {
-  display: flex;
-  height: 100vh;
-  width: 100vw;
-  background-color: rgb(241, 241, 241);
-  justify-content: center;
-  align-items: center;
-}
-
 .notification-page {
+  max-width: 1280px;
+  padding: 0.4rem;
   display: flex;
   border-radius: 0.4rem;
-  height: 90vh;
-  min-width: 40ch;
   flex-direction: column;
-  align-items: center;
   background-color: rgb(255, 255, 255);
+  box-shadow:  20px 20px 60px #d9d9d9,
+             -20px -20px 60px #ffffff;
+  /* border: solid 1px red; */
 }
 
 .heading {
+  max-width: 800px;
   display: flex;
-  min-width: 50ch;
-  max-height: 10vh;
   justify-content: space-between;
-  align-items: center;
-  padding: 2rem;
-  /* border: solid 1px black; */
-
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  margin: 2rem 0;
+  padding-block: 1rem;
+  cursor: pointer;
+  /* border: solid 1px red; */
 }
 
-.heading-left-side {
-  display: flex;
-  /* border: solid 1px black; */
-  justify-content: space-between;
-  min-width: 27vh;
-  font-size: 1.2rem;
-}
-
-.button {
+::selection {
   background-color: transparent;
-  border: none;
-  color: rgb(18, 47, 100);
-  font-size: 1.2rem;
 }
 
-.badge-circle-red {
-  height: 0.5rem;
-  width: 0.5rem;
-  border-radius: 0.5rem;
-  background-color: rgb(255, 27, 27);
-  right: 0.3rem;
-  top: 0.3rem;
-  position: absolute;
+.text-notif {
+  font-size: 1.4rem;
+  font-weight: bold;
 }
-
-.badge-none {
-  display: none;
-}
-
-.text-bg-{background-color: rgb(18, 47, 100);}
 
 .notification-box {
-  display: flex;
-  overflow-y: scroll;
-  flex-direction: column;
-  align-items: center;
-  width: 50ch;
-  /* border: solid 1px black; */
+  max-width: 800px;
+  /* border: solid 1px red; */
 }
 
 .notification {
-  background-color: rgb(239, 249, 253);
-  padding: 0.5rem;
-  border-radius: 0.2rem;
+  min-width: 200px;
   margin-block: 0.5rem;
-  font-size: 0.9rem;
-  position: relative;
-  width: 45ch;
-  /* border: solid 1px black; */
-}
-
-.displayphoto {
-  position: absolute;
-  right: 0.5rem;
-}
-
-.chat {
-  margin-top: 1rem;
-  color: #919191;
-}
-
-img {
-  width: 2rem;
-  margin-right: 1rem;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  background-color: rgb(220, 238, 255);
+  /* border: solid 1px red; */
 }
 
 .read {
-  background-color: rgb(255, 255, 255);
+  min-width: 200px;
+  margin-block: 0.5rem;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  background-color: rgb(248, 248, 248);
+  /* border: solid 1px red; */
+}
+
+/* icons, images, buttons, etc. */
+
+.profile-alignment-with-time {
+  min-width: 90px;
+  min-height: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  /* border: solid 1px red; */
+}
+
+.activity {
+  margin: 0 0.5rem;
+  /* border: solid 1px red; */
+}
+
+.mark-all-as-read-btn {
   border: none;
+  background-color: transparent;
+  color: rgb(29, 68, 112);
 }
 
-span {
-  color: #919191;
-  font-size: 0.7rem;
+img {
+  max-width: 5rem;
 }
 
-@media only screen and (max-width: 960px) {
+.name {
+  font-weight: bold;
+}
+
+.time-stamp {
+  font-size: 0.9rem;
+  /* border: solid 1px red; */
+}
+
+.chat {
+  padding: 0.5rem;
+  border: solid 1px #b4b4b4;
+  border-radius: 0.2rem;
+  background-color: #f5f5f56e;
+}
+
+/* .chess {
+
+} */
+
+@media screen and (min-width: 530px) {
   
-  .main {
-    display: flex;
-    max-height: 100vh;
-    max-width: 23rem;
-    background-color: rgb(241, 241, 241);
-    justify-content: center;
-    align-items: center;
-  }
-  
+.notification {
+  max-width: 780px;
+}
+
+.read {
+  max-width: 780px;
+}
+
+
+}
+
+@media screen and (min-width: 800px) {
+
   .notification-page {
-    display: flex;
-    border-radius: 0.4rem;
-    min-width: 22rem;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: rgb(255, 255, 255);
-    padding-block: 2rem;
-  }
-  
-  .heading {
-    display: flex;
-    max-height: 5vh;
-    max-width: 22rem;
-    min-width: 19rem;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 1rem;
-    /* border: solid 1px black; */
-  
-  }
-
-  .heading-left-side {
-    min-width: 12ch;
-    font-size: 0.9rem;
-  }
-  
-  .notification-box {
     overflow-y: scroll;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-width: 12rem;
-    max-width: 22rem;
-    /* border: solid 1px black; */
-  }
-
-  .notification {
-    background-color: rgb(239, 249, 253);
-    border-radius: 0.2rem;
-    font-size: 0.7rem;
-    position: relative;
-    min-width: 9rem;
-    max-width: 17rem;
-  }
-
-  .displayphoto {
-    min-width: 2rem;
-    max-width: 5rem;
-  }
-
-  .button {
-    font-size: 0.7rem;
+    max-height: 90vh;
+    padding: 0;
   }
 }
